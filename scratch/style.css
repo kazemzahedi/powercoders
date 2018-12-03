@@ -20,6 +20,17 @@ p em{
   font-style: normal;
   text-decoration: underline;
 }
+p.warning{
+  background-color: red;
+  color: white;
+  font-style: bold;
+  padding: .5em 1em;
+  border-radius: 5px 5px 0px 0px;
+  text-shadow: 1px 1px 1px black;
+}
+p.warning::before{
+  content: "WARNING!:"
+}
 ul{
   list-style: none;
 }
