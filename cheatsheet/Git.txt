@@ -1,0 +1,41 @@
+cmd
+cd(space)poco you can go to the POCO directory
+\\\\\\\\\\\\\\\\\\which directory am i in?
+windows   cd
+
+\\\\\\\\\\\\\\\\\\what files and directories are in this directory?
+dir
+
+\\\\\\\\\\\\\\\\\\\\changing directories
+
+to go in to a directory =  cd 
+
+git fundamentals
+.three locations: working directory, index,repository
+.Git commands copy files between these locations
+
+git init
+git status
+
+\\\\\\\\\\\\\\\\\\\\\\\\\git add:
+
+cd scratch
+git add index.html
+git status
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\right a masseges
+
+git commit -m "Save first version of file."
+
+\\\\\\\\\\\\\\\\git log
+\\\\\\\\\\\\\\git diff
+
+baray neveshtan da cmd Q ra bezan
+
+
+
+
+
+
+da poco boro
+git remote add oragin

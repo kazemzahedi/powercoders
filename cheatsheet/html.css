@@ -1,0 +1,47 @@
+/*        html.html          */
+div#header, div#content{
+  text-align: center;
+}
+#content ul{
+  list-style: none;
+}
+#content p{
+  color:rgb(164, 116, 252);
+}
+h1{
+  color:#0041FF;
+}
+h2{
+  color:#350AFF;
+}
+h3{
+  color:#0C15E8;
+}
+h4{
+  color:#0C73E8;
+}
+h5{
+  color:#05B0FF;
+  /*        html.html          */
+}
+/*        html.html          */
+/*        html.html          */
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Oswald', sans-serif;
+}
+.info{
+  float:left;
+}
+p, li{
+  font-family: 'Rokkitt', serif;
+  font-size:20px;
+}
+h1{
+  text-align: center;
+  color:rgb(11, 26, 199);
+  font-size:40px;
+}
+b{
+  color:rgb(57, 81, 242);
+}
