@@ -11,10 +11,12 @@ ul.breadcrumb li{
 }
 ul.breadcrumb li a{
   text-decoration: none;
+  padding:10px;
 }
 ul.breadcrumb li a:hover{
   color:#000;
   text-shadow: 2px 2px 10px #000;
+  background-color: rgba(7, 246, 10, .3);
 }
 ul.breadcrumb li::before{
   content: ">";
