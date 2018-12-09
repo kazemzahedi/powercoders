@@ -1,15 +1,59 @@
+body{
+  position:relative;
+  background-color:#f5f5f5;
+}
+div{
+  border:1px solid #e0e0e0;
+  background-color: rgb(238, 238, 238);
+}
 h1, h2, h3{
   font-family: 'Merriweather', serif;
   color: #0091ea;
-}
-.info{
-  float:left;
-  margin-left:50px;
 }
 p, li{
   font-family: 'Nanum Gothic Coding', monospace;
   font-size:20px;
 }
+#info, #experience{
+  position:absolute;
+  min-height: 30vh;
+  left:2em;
+  width: 23em;
+  padding:20px;
+}
+#img{
+  position: absolute;
+  min-height: 70vh;
+  left: 28.6em;
+  width:calc(100% - 57.5em);
+}
+#img img{
+  padding:33px;
+}
+
+#sprache, #skills{
+  position: absolute;
+  min-height: 20vh;
+  right: 2em;
+  width: 23em;
+  padding:20px;
+}
+
+#experience{
+  top:16em;
+}
+
+#skills{
+  top:11.7em;
+}
+#hobby{
+  position: absolute;
+  width:23em;
+  top:32em;
+  padding:20px;
+  left:2em;
+}
+
 p{
   color:#64dd17;
 }
@@ -17,14 +61,9 @@ p b{
   color: #1faa00;
 }
 a{
-  color: ##6200ea;
+  color: #6200ea;
   text-decoration: none;
 }
 a:hover{
   color:#0091ea;
-}
-img{
-  border:1px solid #000;
-  padding:5px;
-  margin-left:20px;
 }
