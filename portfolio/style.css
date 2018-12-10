@@ -1,69 +1,84 @@
-body{
+body {
   position:relative;
-  background-color:#f5f5f5;
+  background-color: #f5f5f5;
+  line-height: 1.5;
 }
-div{
-  border:1px solid #e0e0e0;
+
+div {
+  border: 1px solid #e0e0e0;
   background-color: rgb(238, 238, 238);
 }
-h1, h2, h3{
+
+h1, h2, h3 {
   font-family: 'Merriweather', serif;
   color: #0091ea;
 }
-p, li{
+
+p, li {
   font-family: 'Nanum Gothic Coding', monospace;
-  font-size:20px;
+  font-size: 16px;
 }
-#info, #experience{
-  position:absolute;
+
+div#info table tr td:first-child, div#sprache table tr td:first-child {
+  font-weight: bold;
+}
+
+#info, #experience {
+  position: absolute;
   min-height: 30vh;
-  left:2em;
+  left: 2em;
   width: 23em;
-  padding:20px;
+  padding: 20px;
 }
-#img{
+
+#img {
   position: absolute;
   min-height: 70vh;
   left: 28.6em;
-  width:calc(100% - 57.5em);
-}
-#img img{
-  padding:33px;
+  width: calc(100% - 57.5em);
 }
 
-#sprache, #skills{
+#img img {
+  padding: 27px;
+}
+
+#sprache, #skills {
   position: absolute;
   min-height: 20vh;
   right: 2em;
   width: 23em;
-  padding:20px;
+  padding: 20px;
 }
 
-#experience{
-  top:16em;
+#experience {
+  top: 19.7em;
 }
 
-#skills{
-  top:11.7em;
+#skills {
+  top: 13.2em;
 }
-#hobby{
+
+#hobby {
   position: absolute;
-  width:23em;
-  top:32em;
-  padding:20px;
-  left:2em;
+  width: 23em;
+  top: 36em;
+  padding: 20px;
+  left: 2em;
 }
 
-p{
-  color:#64dd17;
+p {
+  color: #64dd17;
 }
-p b{
+
+p b {
   color: #1faa00;
 }
-a{
+
+a {
   color: #6200ea;
   text-decoration: none;
 }
-a:hover{
-  color:#0091ea;
+
+a:hover {
+  color: #0091ea;
 }
