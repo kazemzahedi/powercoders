@@ -1,0 +1,61 @@
+body {
+  width: 86%;
+}
+
+#info, #img, #sprache, #experience, #skills, #hobby {
+  font-size:16px;
+}
+
+#img img {
+  width:175px;
+}
+
+#info {
+  position: absolute;
+  min-height: 40vh;
+  left: 1em;
+  width: 47%;
+  padding: 20px;
+}
+
+#img {
+  position: absolute;
+  min-height: 50vh;
+  left: 60%;
+  width:50%;
+  padding:0px;
+}
+
+#sprache{
+  position: absolute;
+  min-height: 30vh;
+  left: 1em;
+  top:23em;
+  width: 47%;
+  padding: 20px;
+}
+
+#experience {
+  position: absolute;
+  min-height: 20vh;
+  left: 60%;
+  top:23.6em;
+  width:50%;
+}
+
+#skills{
+  position: absolute;
+  min-height: 40vh;
+  left: 1em;
+  top:41em;
+  width: 47%;
+  padding: 20px;
+}
+
+#hobby {
+  position: absolute;
+  min-height: 35vh;
+  left: 60%;
+  top:41.6em;
+  width:50%;
+}

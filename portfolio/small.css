@@ -1,0 +1,24 @@
+#cv {
+  text-align: center;
+}
+
+#info, #img, #sprache, #experience, #skills, #hobby {
+  min-height: 30vh;
+  left: 1em;
+  width: 98%;
+  padding: 10px;
+  margin-bottom:20px;
+  font-size: 20px;
+}
+
+#cv {
+  border-bottom:none;
+  margin-bottom: 30px;
+}
+
+#img img {
+  border:1px solid #616161;
+  padding:10px;
+  margin-left:30px;
+  width: 300px;
+}

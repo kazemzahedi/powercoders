@@ -1,0 +1,59 @@
+body {
+  width: 100%;
+}
+
+div#info, div#experience, div#img, div#sprache, div#skills, div#hobby {
+  font-size: 16px;
+}
+
+div#info, div#experience {
+  position: absolute;
+  min-height: 30vh;
+  left: 2em;
+  width: 23em;
+  padding: 20px;
+}
+
+h2#cv {
+  display: none;
+}
+
+div#img, div#hobby {
+  position: absolute;
+  min-height: 47vh;
+  left: 28.6em;
+  width: calc(100% - 57.5em);
+}
+
+div#hobby{
+  top:20.3em;
+}
+
+div#img img {
+  padding: 27px;
+}
+
+div#sprache  {
+  position: absolute;
+  min-height: 20vh;
+  right: 2em;
+  width: 22em;
+  padding: 20px;
+  left: auto;
+  top:auto;
+}
+
+div#sprache h3 {
+  margin:0px;
+}
+
+div#experience {
+  top: 19.7em;
+}
+
+div#skills {
+  top: 13.2em;
+  left:auto;
+  right: 2em;
+  width: 22em;
+}
