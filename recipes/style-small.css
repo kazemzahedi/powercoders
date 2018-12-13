@@ -1,0 +1,16 @@
+body {
+  font-size:20px;
+  color:#494949;
+  line-height: 1.5;
+}
+div#col-1, div#col-2, div#col-3 {
+  min-height: 70vh;
+  left:2em;
+  width:90%;
+  background-color: #fafafa;
+  box-shadow: none;
+  padding:20px;
+}
+div#col-1 img{
+  width:97%;
+}

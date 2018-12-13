@@ -1,0 +1,50 @@
+/*-----------------------------col-1---------------------------*/
+div#col-1 {
+  position: absolute;
+  min-height: 90vh;
+  left:1em;
+  width:25%;
+  padding:20px;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 10px #e0e0e0;
+}
+
+div#col-1 img {
+  padding: 5px;
+  width: 94%;
+  height:200px;
+  border:1px solid #9e9e9e;
+}
+
+/*-----------------------------------col-2-------------------------*/
+div#col-2 {
+  position: absolute;
+  background-color: #fafafa;
+  left: 32%;
+  width:25%;
+  min-height: 90vh;
+  padding:20px;
+  box-shadow: 2px 2px 10px #bdbdbd;
+}
+
+div#col-2 ul li h3, div#col-3 ul li h3 {
+  border-bottom:1px solid #757575;
+  padding-bottom: 20px;
+}
+
+div#col-2 ul li ol, div#col-3 ul li ol {
+  padding-left:20px;
+}
+/*-----------------------------------col-3-------------------------*/
+div#col-3 {
+  position: absolute;
+  background-color: #fafafa;
+  right: 1em;
+  width: 33%;
+  left:auto;
+  top:auto;
+  padding:20px;
+  min-height: 90vh;
+  box-shadow: 2px 2px 10px #9e9e9e;
+}
+/*-----------------------------------end of the col-3-------------------------*/
