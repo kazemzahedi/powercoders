@@ -3,6 +3,7 @@
   <head>
     <title>change_para_class</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="setClass.js"></script>
   </head>
   <body>
     <p id="mypara">This is a paragraph of text that can change style. Use the
@@ -17,38 +18,5 @@
     <p class="warning">This is an example warning.</p>
 
     <p class="tip">This is an example tip.</p>
-
-    <!--Javascript-->
-
-    <script>
-      //Javascript code goes here
-      console.log('My code is running');
-
-      function greet(name) {
-        console.log('hello, ' + name);
-      }
-
-
-      function setClassTip(event) {
-        let el = document.getElementById('mypara');
-        el.className = 'tip';
-        alert ('You want the color of the text to be green');
-      }
-
-      function setClassWarning(event) {
-        let el = document.getElementById('mypara');
-        el.className = 'warning';
-        alert ('You want the color of the text to be red');
-      }
-
-      function clearClass(event) {
-        let el = document.getElementById('mypara');
-        el.className = '';
-      }
-
-
-
-    </script>
-
   </body>
 </html>
