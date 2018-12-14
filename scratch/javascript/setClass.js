@@ -5,20 +5,24 @@ function greet(name) {
   console.log('hello, ' + name);
 }
 
+function setClass(event, className) {
 
-function setClassTip(event) {
   let el = document.getElementById('mypara');
-  el.className = 'tip';
-  alert ('You want the color of the text to be green');
+  el.className = className;
+
 }
 
-function setClassWarning(event) {
-  let el = document.getElementById('mypara');
-  el.className = 'warning';
-  alert ('You want the color of the text to be red');
-}
+//function setClassTip(event) {
+// let el = document.getElementById('mypara');
+// el.className = 'tip';
+//}
 
-function clearClass(event) {
-  let el = document.getElementById('mypara');
-  el.className = '';
-}
+//function setClassWarning(event) {
+// let el = document.getElementById('mypara');
+// el.className = 'warning';
+//}
+
+//function clearClass(event) {
+//let el = document.getElementById('mypara');
+//el.className = '';
+//}
