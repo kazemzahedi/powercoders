@@ -1,23 +1,26 @@
-body{
+body {
   background: #fff;
   text-align: center;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
 }
-p, li{
+
+p, li {
   font-family: 'Rokkitt', serif;
   font-size:20px;
 }
 
-p#footer{
+p#footer {
   border-top: 1px solid black;
   background-color: white;
   padding-top: 50px;
   margin-left:0;
   border-top:2px solid #red;
 }
-p{
+
+p {
   font-size: 20px;
   color: red;
   font-weight: 20px;
@@ -25,11 +28,12 @@ p{
   color:rgba(18, 242, 20, 0.85);
 }
 /* just change (em)element in (P)element. does not worked for all (em)element */
-p em{
+p em {
   font-style: normal;
   text-decoration: underline;
 }
-p.warning{
+
+p.warning {
   background-color: rgb(158,61,244, .80);
   color: white;
   font-style: bold;
@@ -37,9 +41,11 @@ p.warning{
   border-radius: 5px 5px 0px 0px;
   text-shadow: 1px 1px 1px black;
 }
-p.warning::before{
+
+p.warning::before {
   content: "WARNING!:"
 }
-ul{
+
+ul {
   list-style: none;
 }
