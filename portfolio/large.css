@@ -21,7 +21,7 @@ h2#cv {
 div#img, div#hobby {
   position: absolute;
   min-height: 47vh;
-  left: 28.6em;
+  left: 31.6em;
   width: calc(100% - 57.5em);
 }
 
@@ -44,7 +44,7 @@ div#sprache  {
 }
 
 div#sprache h3 {
-  margin:0px;
+  margin:0;
 }
 
 div#experience {
@@ -56,4 +56,13 @@ div#skills {
   left:auto;
   right: 2em;
   width: 22em;
+}
+
+#education {
+  position: absolute;
+  min-height: 35vh;
+  left: 2em;
+  top:31em;
+  width:95%;
+  padding: 20px;
 }

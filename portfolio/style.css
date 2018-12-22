@@ -2,7 +2,7 @@ body {
   position:relative;
   background-color: #fafafa;
   line-height: 1.5;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Crimson Text', serif;
   color: #757575;
 }
 
@@ -20,5 +20,5 @@ div#info table tr td:first-child, div#sprache table tr td:first-child {
 
 ul {
   list-style: none;
-  padding:0px;
+  padding:0;
 }

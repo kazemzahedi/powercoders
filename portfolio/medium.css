@@ -6,56 +6,90 @@ body {
   font-size:16px;
 }
 
+h3 {
+  border-bottom:none;
+  margin-bottom: 10px;
+}
+
 #img img {
-  width:175px;
+  width:129px;
 }
 
 #info {
   position: absolute;
-  min-height: 40vh;
+  min-height: 27vh;
   left: 1em;
-  width: 47%;
-  padding: 20px;
+  width: 60%;
+  padding: 0 20px;
+}
+
+#info ul {
+  border-left:1px solid #cbc3c3;
+  padding-left: 30px;
+  line-height: 2;
 }
 
 #img {
   position: absolute;
-  min-height: 50vh;
-  left: 60%;
-  width:50%;
-  padding:0px;
+  min-height: 27vh;
+  left: 68%;
+  width:30%;
+  padding:0;
 }
 
 #sprache {
   position: absolute;
-  min-height: 30vh;
+  min-height: 20vh;
   left: 1em;
-  top:23em;
-  width: 47%;
-  padding: 20px;
+  top:43em;
+  width: 90%;
+}
+
+#td-1 {
+  padding-bottom: 25px;
 }
 
 #experience {
   position: absolute;
   min-height: 20vh;
-  left: 60%;
-  top:23.6em;
+  top:17.8em;
   width:50%;
+}
+
+table, #skills ul, #hobby ul, #education ul {
+  margin:0 0 0 40px;
+}
+
+#experience td {
+  min-width: 91px;
+}
+
+div#sprache table tr td:first-child {
+  font-weight: normal;
+}
+
+#experience .td-w {
+  min-width: 400px;
 }
 
 #skills {
   position: absolute;
   min-height: 40vh;
   left: 1em;
-  top:41em;
-  width: 47%;
-  padding: 20px;
+  top:28em;
+  width: 77%;
+  line-height: 2;
 }
 
-#hobby {
+#hobby, #education {
   position: absolute;
   min-height: 35vh;
-  left: 60%;
-  top:41.6em;
-  width:50%;
+  right: -4em;
+  left: auto;
+  top:18em;
+  width:35%;
+}
+
+#education{
+  top:29em;
 }
