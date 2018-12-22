@@ -13,8 +13,8 @@ h1, h2, h3 {
 }
 
 div#col-2 ul, div#col-3 ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -23,4 +23,21 @@ div#col-1 h1 {
   text-shadow: 2px 2px 9px rgb(72, 73, 74);
   font-size:40px;
   text-align: center;
+}
+
+span.show {
+  display: inline-block;
+  width: 1em;
+}
+
+span.hide {
+  display: none;
+}
+
+ol.show {
+  display: block;
+}
+
+ol.hide {
+  display: none;
 }
