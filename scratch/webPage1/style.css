@@ -1,0 +1,143 @@
+* {box-sizing: border-box;}
+/* border    rgb(14, 140, 0)  */
+body {
+  background-color: #fafafa;
+  width: 1200px;
+  margin: 0 auto;
+  font-family: 'Aleo', serif;
+}
+
+#body {
+  background-color: #fff;
+  min-height: 1100px;
+}
+
+h1, h2, h3, h4 {color: #4e342e;}
+
+p {color: #424242;}
+
+span {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #eee;
+  color: #424242;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+header {
+  height: 200px;
+  border-top: 5px solid rgb(14, 140, 0);
+  background-color: #eee;
+  margin-bottom: 30px;
+}
+
+header .logo, header .banner {
+  height: 200px;
+}
+
+header .logo {
+  width:30%;
+  float:left;
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+header .logo img {
+  width: 45%;
+}
+
+header .banner {
+  width:70%;
+  float:left;
+  font-size: 14px;
+  padding: 24px 10px 0 20px;
+  text-shadow: 5px 5px 10px #757575;
+}
+
+/*---------------left content-----------------------*/
+#content .content_4col {
+  width: 30%;
+  float: left;
+  height: 500px
+}
+
+#content .content_4col ul {
+  list-style: none;
+  padding: 0 50px;
+  margin: 0;
+}
+
+#content .content_4col ul li a {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(14, 140, 0);
+  text-decoration: none;
+}
+
+#content .content_4col ul li a:hover {
+  color: #4e342e;
+}
+
+#content .content_4col p {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: rgba(228, 158, 21, 0.72);
+  color: rgb(14, 140, 0);
+  padding: 57px 0 0 41px;
+  margin: 50px;
+  font-size: 21px;
+}
+
+/*---------------right content-----------------------*/
+#content .content_8col {
+  width: 67%;
+  float: left;
+  min-height: 500px;
+  line-height: 1.5;
+}
+
+#content .content_8col .text_img {
+  display: flex;
+  flex-grow: wrap;
+}
+
+#content .content_8col .text_img a {
+  flex:1px;
+  border: 1px solid #fff;
+  min-height: 300px;
+  padding: 10px;
+}
+
+#content .content_8col .text_img a:hover {
+  border: 1px solid rgb(14, 140, 0);
+  background-color: #eee;
+}
+
+#content .content_8col .text_img img {
+  width: 100%;
+}
+
+/*---------------footer-----------------------*/
+footer {
+  background-color: #212121;
+  color: #fff;
+  width:100%;
+  height:90px;
+  margin-top: 30px;
+  float:left
+}
+
+footer .footer_content {
+  width: 70%;
+  float:right;
+}
+
+footer .footer_content a {
+  color: #fff;
+  float: right;
+  margin-top: -40px;
+  margin-right: 10px;
+  text-decoration: none;
+}
