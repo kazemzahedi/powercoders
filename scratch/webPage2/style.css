@@ -1,0 +1,210 @@
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+color blau : rgb(5, 55, 104)
+body color : rgb(231, 242, 246) */
+
+* {box-sizing: border-box;}
+body {
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 150px;
+}
+
+.center_2 {
+  width:900px;
+  margin: 0 auto;
+}
+
+/*-------------------header------------------*/
+header {
+  background-color: rgb(5, 55, 104);
+  height: 150px;
+}
+
+header img {
+  float:left;
+  width: 180px;
+  margin: 40px 0 0 15px;
+}
+
+header ul {
+  list-style: none;
+  padding: 110px 0 0 0;
+  margin: 0;
+}
+
+header ul li {
+  float: left;
+  padding: 5px 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #d6f5ff;
+  padding: 10px;
+  border-bottom: 3px solid rgb(5, 55, 104);
+}
+
+header ul li a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+header div {
+  float: right;
+  margin-right: 20px;
+}
+
+/*--------------------content----------------*/
+
+  /*---------slideshow--------*/
+#slideshow div.hidden {
+  display: none;
+}
+
+#slideshow ul li a.list {
+  margin-left: 10px;
+  background-color: rgb(231, 242, 246);
+  color: rgb(5, 55, 104);
+  border: 1px solid rgb(5, 55, 104);
+}
+
+
+#slideshow {
+  background-image: url("slideshow.jpg");
+  height: 400px;
+  position: relative;
+
+}
+
+#slideshow #center_2 {
+  height: 400px;
+  padding:20px 0;
+}
+
+#slideshow h1 {
+  margin: 0;
+  color: rgb(5, 55, 104);
+  font-size: 48px;
+
+}
+
+#slideshow ul {
+  position: absolute;
+  list-style: none;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+#slideshow ul li {
+  margin: 20px 0;
+}
+
+#slideshow ul li a {
+  padding: 3px 10px;
+  margin: 10px 0;
+  background-color: rgb(5, 55, 104);
+  border-radius : 5px;
+  text-decoration: none;
+  color: rgb(231, 242, 246);
+  border: 1px solid rgb(5, 55, 104);
+}
+
+#slideshow ul li a:hover {
+  background-color: rgb(231, 242, 246);
+  color:  rgb(5, 55, 104);
+  border: 1px solid rgb(5, 55, 104);
+}
+
+#slideshow #center_2 div {
+  position: absolute;
+  width: 42%;
+  left: 40%;
+  margin-top: 25px;
+}
+
+#text-1 p, #text-2 p, #text-3 p, #text-4 p, #text-5 p{
+  line-height: 1.8;
+  color: rgb(5, 55, 104);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#text-1 a, #text-2 a, #text-3 a, #text-4 a, #text-5 a {
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: rgba(5, 55, 104, 0.8);
+  text-decoration: none;
+}
+
+  /*------------list----------*/
+
+#list {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#list div.box {
+  flex: 1;
+  border:none;
+  border-bottom: 1px solid rgb(5, 55, 104);
+  padding-bottom: 10px;
+  margin: 0 5px 20px 5px;
+  min-height: 150px;
+}
+
+#list div h5 {
+  text-align: center;
+  background-color: #f49426;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(231, 242, 246);
+}
+
+#list div.green h5 {
+  background-color: #37901c;
+}
+
+#list div p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  color: rgb(5, 55, 104);
+}
+
+#list div a {
+  background-color: rgb(153, 191, 255);
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+
+
+/*---------------------footer----------------*/
+footer {
+  background-color: rgb(5, 55, 104);
+  height: 100px;
+}
+
+footer p {
+  position: absolute;
+  right: 20px;
+  color: #fff;
+}
