@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let inputBox = document.getElementById('item');
     let li = creatNewListItem(inputBox.value);
     document.querySelector('ul').appendChild(li);
+    inputBox.value = '';
   });
   //Add code here that listen for 'keyup' on the 'input' element
   document.querySelector('input').addEventListener('keyup', function (event) {
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       let inputBox = document.getElementById('item');
       let li = creatNewListItem(inputBox.value);
       document.querySelector('ul').appendChild(li);
+      inputBox.value = '';
       //console.log(event.key);
     }
   });
