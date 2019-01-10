@@ -23,6 +23,7 @@ function creatNewListItem(itemName) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
+  document.getElementById('item').focus();
   document.querySelector('button').addEventListener('click', function (event) {
     let inputBox = document.getElementById('item');
     let li = creatNewListItem(inputBox.value);
