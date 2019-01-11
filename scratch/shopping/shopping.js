@@ -23,22 +23,27 @@ function creatNewListItem(itemName) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  document.getElementById('item').focus();
+  let inputBox = document.getElementById('item');
+  let shoppingList = document.querySelector('ul');
+
   document.querySelector('button').addEventListener('click', function (event) {
-    let inputBox = document.getElementById('item');
-    let li = creatNewListItem(inputBox.value);
-    document.querySelector('ul').appendChild(li);
-    inputBox.value = '';
-  });
-  //Add code here that listen for 'keyup' on the 'input' element
-  document.querySelector('input').addEventListener('keyup', function (event) {
-    //and logs the event.key property
-    if (event.key === 'Enter') {
-      let inputBox = document.getElementById('item');
-      let li = creatNewListItem(inputBox.value);
-      document.querySelector('ul').appendChild(li);
+    inputBox.value = inputBox.value.trim();   //x = x.trim();
+    if (inputBox.value !== '') {
+      shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
       inputBox.value = '';
-      //console.log(event.key);
+    }
+    inputBox.focus();
+  });
+
+  //Add code here that listen for 'keyup' on the 'input' element
+  inputBox.addEventListener('keyup', function (event) {
+    if (inputBox.value.trim() !== ''){
+      if (event.key === 'Enter') {
+        shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
+        inputBox.value = '';
+      }
     }
   });
+
+  inputBox.focus();
 });
