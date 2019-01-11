@@ -1,12 +1,11 @@
 function creatNewListItem(itemName) {
-  let li = document.createElement('li');
+  const li = document.createElement('li');
+  const span = document.createElement('span');
+  const text_span = document.createTextNode(itemName);
 
-  let span = document.createElement('span');
-  let text_span = document.createTextNode(itemName);
 
-
-  let deleteButton = document.createElement('button');
-  let delete_text = document.createTextNode('delete'); //delete_text.textContent = 'delete';
+  const deleteButton = document.createElement('button');
+  const delete_text = document.createTextNode('delete'); //delete_text.textContent = 'delete';
 
   //Add a click handler that logs the click here
   deleteButton.addEventListener('click', function (event) {
@@ -23,9 +22,9 @@ function creatNewListItem(itemName) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  let inputBox = document.getElementById('item');
-  let shoppingList = document.querySelector('ul');
-  let addItemButton = document.querySelector('button');
+  const inputBox = document.getElementById('item');
+  const shoppingList = document.querySelector('ul');
+  const addItemButton = document.querySelector('button');
 
   addItemButton.addEventListener('click', function (event) {
     inputBox.value = inputBox.value.trim();   //x = x.trim();
@@ -52,4 +51,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
   });
 
   inputBox.focus();
+  addItemButton.disabled = true;
 });
