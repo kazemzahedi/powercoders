@@ -25,12 +25,14 @@ function creatNewListItem(itemName) {
 document.addEventListener('DOMContentLoaded', function (event) {
   let inputBox = document.getElementById('item');
   let shoppingList = document.querySelector('ul');
+  let addItemButton = document.querySelector('button');
 
-  document.querySelector('button').addEventListener('click', function (event) {
+  addItemButton.addEventListener('click', function (event) {
     inputBox.value = inputBox.value.trim();   //x = x.trim();
     if (inputBox.value !== '') {
       shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
       inputBox.value = '';
+      addItemButton.disabled = true;
     }
     inputBox.focus();
   });
@@ -38,10 +40,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
   //Add code here that listen for 'keyup' on the 'input' element
   inputBox.addEventListener('keyup', function (event) {
     if (inputBox.value.trim() !== ''){
+      addItemButton.disabled = false;
       if (event.key === 'Enter') {
         shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
         inputBox.value = '';
       }
+    }
+    if (inputBox.value.trim() === '') {
+      addItemButton.disabled = true;
     }
   });
 
