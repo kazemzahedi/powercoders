@@ -1,3 +1,9 @@
+/**
+ * Create and returns an 'li' element for inclusion in the shopping list.
+ *
+ * @param {string} itemName Name of the item to add to the list
+ * @returns {HTMLElement} li element
+ */
 function creatNewListItem(itemName) {
   const li = document.createElement('li');
   const span = document.createElement('span');
@@ -22,32 +28,35 @@ function creatNewListItem(itemName) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
+
   const inputBox = document.getElementById('item');
   const shoppingList = document.querySelector('ul');
   const addItemButton = document.querySelector('button');
 
   addItemButton.addEventListener('click', function (event) {
     inputBox.value = inputBox.value.trim();   //x = x.trim();
-    if (inputBox.value !== '') {
-      shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
-      inputBox.value = '';
-      addItemButton.disabled = true;
-    }
+
+    shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
+    inputBox.value = '';
+    addItemButton.disabled = true;
     inputBox.focus();
   });
 
-  //Add code here that listen for 'keyup' on the 'input' element
   inputBox.addEventListener('keyup', function (event) {
-    if (inputBox.value.trim() !== ''){
-      addItemButton.disabled = false;
-      if (event.key === 'Enter') {
-        shoppingList.appendChild(creatNewListItem(inputBox.value.trim()));
-        inputBox.value = '';
-      }
+    const trimmedValue = inputBox.value.trim();
+    addItemButton.disabled = trimmedValue === '';
+
+    if (trimmedValue === ''){
+      return;
     }
-    if (inputBox.value.trim() === '') {
-      addItemButton.disabled = true;
+
+    if (event.key !== 'Enter') {
+      return;
     }
+
+    shoppingList.appendChild(creatNewListItem(trimmedValue));
+    inputBox.value = '';
+    addItemButton.disabled = true;
   });
 
   inputBox.focus();
