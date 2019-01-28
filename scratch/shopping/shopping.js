@@ -24,6 +24,8 @@ function creatNewListItem(itemName) {
     const listItemLength = listItemCheck.length;
     if (listItemLength === 0){
       clearListButton.disabled = true;
+    } else {
+      clearListButton.disabled = false;
     }
   }); // this function can call the all of variable,that is in up.
 
