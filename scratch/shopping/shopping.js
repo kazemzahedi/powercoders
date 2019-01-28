@@ -9,10 +9,6 @@ function creatNewListItem(itemName) {
   const span = document.createElement('span');
   const text_span = document.createTextNode(itemName);
 
-  const clearListButton = document.querySelector('button#clear');
-  const listItemCheck = document.querySelectorAll('li');
-
-
   const deleteButton = document.createElement('i');
   //const delete_text = document.createTextNode('delete'); //delete_text.textContent = 'delete
 
@@ -21,12 +17,14 @@ function creatNewListItem(itemName) {
   deleteButton.addEventListener('click', function (event) {
     console.log('Delete button clicked: ' + itemName);
     li.remove();
-    const listItemLength = listItemCheck.length;
-    if (listItemLength === 0){
-      clearListButton.disabled = true;
-    } else {
-      clearListButton.disabled = false;
-    }
+
+    //line (24 to 27) in line 22
+    document.querySelector('button#clear').disabled = document.querySelectorAll('li').length === 0;
+
+    //const clearListButton = document.querySelector('button#clear');
+    //const listItemCheck = document.querySelectorAll('li');
+
+    //clearListButton.disabled = listItemCheck.length === 0;
   }); // this function can call the all of variable,that is in up.
 
   span.appendChild(text_span);
