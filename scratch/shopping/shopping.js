@@ -9,21 +9,28 @@ function creatNewListItem(itemName) {
   const span = document.createElement('span');
   const text_span = document.createTextNode(itemName);
 
+  const clearListButton = document.querySelector('button#clear');
+  const listItemCheck = document.querySelectorAll('li');
 
-  const deleteButton = document.createElement('button');
-  const delete_text = document.createTextNode('delete'); //delete_text.textContent = 'delete';
+
+  const deleteButton = document.createElement('i');
+  //const delete_text = document.createTextNode('delete'); //delete_text.textContent = 'delete
+
 
   //Add a click handler that logs the click here
   deleteButton.addEventListener('click', function (event) {
     console.log('Delete button clicked: ' + itemName);
     li.remove();
+    const listItemLength = listItemCheck.length;
+    if (listItemLength === 0){
+      clearListButton.disabled = true;
+    }
   }); // this function can call the all of variable,that is in up.
 
   span.appendChild(text_span);
-  deleteButton.appendChild(delete_text);
 
   li.appendChild(span);
-  li.appendChild(deleteButton);
+  li.appendChild(deleteButton).className = 'fas fa-trash-alt';
   return li;
 }
 
@@ -32,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const inputBox = document.getElementById('item');
   const shoppingList = document.querySelector('ul');
   const addItemButton = document.querySelector('button');
+  const clearListButton = document.querySelector('button#clear');
 
   addItemButton.addEventListener('click', function (event) {
     inputBox.value = inputBox.value.trim();   //x = x.trim();
@@ -40,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     inputBox.value = '';
     addItemButton.disabled = true;
     inputBox.focus();
+    clearListButton.disabled = false;
   });
 
   inputBox.addEventListener('keyup', function (event) {
@@ -57,8 +66,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
     shoppingList.appendChild(creatNewListItem(trimmedValue));
     inputBox.value = '';
     addItemButton.disabled = true;
+    clearListButton.disabled = false;
   });
 
-  inputBox.focus();
+  clearListButton.addEventListener('click', function () {
+    const items = document.querySelectorAll('li');
+    items.forEach(function(element) {
+      element.remove();
+    });
+    inputBox.focus();
+    clearListButton.disabled = true;
+  });
+  clearListButton.disabled = true;
   addItemButton.disabled = true;
+  inputBox.focus();
 });
