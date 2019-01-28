@@ -34,8 +34,12 @@ function creatNewListItem(itemName) {
   return li;
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
+/**
+ * set up event listeners and configure initial element state when the
+ * DOM is ready.
+ */
 
+function domContentLoaded() {
   const inputBox = document.getElementById('item');
   const shoppingList = document.querySelector('ul');
   const addItemButton = document.querySelector('button');
@@ -80,4 +84,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
   clearListButton.disabled = true;
   addItemButton.disabled = true;
   inputBox.focus();
-});
+}
+
+if(document.readyState === 'loading') {
+  //DOMContentLoaded has not fired yet.
+  document.addEventListener('DOMContentLoaded', function (event) {
+    domContentLoaded();
+  });
+} else {
+  //DOMContentLoaded has fired.
+  domContentLoaded();
+}
