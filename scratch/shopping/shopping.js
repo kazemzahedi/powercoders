@@ -1,14 +1,13 @@
 /**
  * Create and returns an 'li' element for inclusion in the shopping list.
  *
- * @param {string} itemName Name of the item to add to the list
- * @param {string} quantity Quantity of the item to append to the list
+ * @param {{name: string, quantity: string}} item Item to append to the list
  * @returns {HTMLElement} li element
  */
-function creatNewListItem(itemName, quantity) {
+function creatNewListItem(item) {
   const listItem = document.createElement('li');
   const span = document.createElement('span');
-  const text_span = document.createTextNode(itemName);
+  const text_span = document.createTextNode(item.name);
   span.appendChild(text_span);
 
   const deleteButton = document.createElement('i');
@@ -17,7 +16,7 @@ function creatNewListItem(itemName, quantity) {
 
   //Add a click handler that logs the click here
   deleteButton.addEventListener('click', function (event) {
-    console.log('Delete button clicked: ' + itemName);
+    console.log('Delete button clicked: ' + item.name);
     listItem.remove();
 
     //line (24 to 27) in line 22
@@ -31,10 +30,10 @@ function creatNewListItem(itemName, quantity) {
 
   listItem.appendChild(span);
 
-  if (quantity !== ''){
+  if (item.quantity !== ''){
     listItem.appendChild(document.createTextNode(''));
     const quantityText = document.createElement('span');
-    quantityText.textContent = `(${quantity})`;
+    quantityText.textContent = `(${item.quantity})`;
     listItem.appendChild(quantityText);
   }
   listItem.appendChild(deleteButton).className = 'fas fa-trash-alt';
@@ -57,17 +56,22 @@ function domContentLoaded() {
     const trimmedValue = inputBox.value.trim();
     const trimmedValueQuantity = quantityBox.value.trim();
 
+    const item = {
+      name: trimmedValue,
+      quantity: trimmedValueQuantity
+    };
 
-    shoppingList.appendChild(creatNewListItem(trimmedValue, trimmedValueQuantity));
+    shoppingList.appendChild(creatNewListItem(item));
     inputBox.value = '';
     quantityBox.value = '';
     addItemButton.disabled = true;
-    inputBox.focus();
     clearListButton.disabled = false;
+    inputBox.focus();
   }
 
   function onkeyup(event) {
     const trimmedValue = inputBox.value.trim();
+    const trimmedValueQuantity = quantityBox.value.trim();
     addItemButton.disabled = trimmedValue === '';
 
     if (trimmedValue === ''){
@@ -78,7 +82,12 @@ function domContentLoaded() {
       return;
     }
 
-    shoppingList.appendChild(creatNewListItem(trimmedValue, quantityBox.value.trim()));
+    const item = {
+      name: trimmedValue,
+      quantity: trimmedValueQuantity
+    };
+
+    shoppingList.appendChild(creatNewListItem(item));
     inputBox.value = '';
     quantityBox.value = '';
     addItemButton.disabled = true;
