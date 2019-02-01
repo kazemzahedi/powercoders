@@ -13,13 +13,12 @@ function ShoppingListItem(name, quantity) {
 /**
  * Create and returns an 'li' element for inclusion in the shopping list.
  *
- * @param {ShoppingListItem} item Item to append to the list
  * @returns {HTMLElement} li element
  */
-function creatNewListItem(item) {
+ShoppingListItem.prototype.toListItem = function()  {
   const listItem = document.createElement('li');
   const span = document.createElement('span');
-  const text_span = document.createTextNode(item.name);
+  const text_span = document.createTextNode(this.name);
   span.appendChild(text_span);
 
   const deleteButton = document.createElement('i');
@@ -28,7 +27,6 @@ function creatNewListItem(item) {
 
   //Add a click handler that logs the click here
   deleteButton.addEventListener('click', function (event) {
-    console.log('Delete button clicked: ' + item.name);
     listItem.remove();
 
     //line (24 to 27) in line 22
@@ -42,15 +40,15 @@ function creatNewListItem(item) {
 
   listItem.appendChild(span);
 
-  if (item.quantity !== ''){
+  if (this.quantity !== ''){
     listItem.appendChild(document.createTextNode(''));
     const quantityText = document.createElement('span');
-    quantityText.textContent = `(${item.quantity})`;
+    quantityText.textContent = `(${this.quantity})`;
     listItem.appendChild(quantityText);
   }
   listItem.appendChild(deleteButton).className = 'fas fa-trash-alt';
   return listItem;
-}
+};
 
 /**
  * set up event listeners and configure initial element state when the
@@ -70,7 +68,7 @@ function domContentLoaded() {
 
     const item = new ShoppingListItem(trimmedValue, trimmedValueQuantity);
 
-    shoppingList.appendChild(creatNewListItem(item));
+    shoppingList.appendChild(item.toListItem());
     inputBox.value = '';
     quantityBox.value = '';
     addItemButton.disabled = true;
@@ -93,7 +91,7 @@ function domContentLoaded() {
 
     const item = new ShoppingListItem(trimmedValue, trimmedValueQuantity);
 
-    shoppingList.appendChild(creatNewListItem(item));
+    shoppingList.appendChild(item.toListItem());
     inputBox.value = '';
     quantityBox.value = '';
     addItemButton.disabled = true;
