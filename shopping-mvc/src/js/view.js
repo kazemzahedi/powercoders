@@ -38,6 +38,10 @@ class View {
     for (let i = 0; i < this.model_.items.length; i ++){
       const item = this.model_.items[i];
       const listItem = item.toListItem();
+
+      const deleteButton = listItem.querySelector('i');
+      deleteButton.addEventListener('click', () => this.controller_.deleteItem(i));
+
       this.shoppingList_.appendChild(listItem);
     }
 
