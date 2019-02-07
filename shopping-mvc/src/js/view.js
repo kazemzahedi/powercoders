@@ -25,7 +25,12 @@ class View {
     /** @private {!HTMLElement} Button to add an item */
     this.addItemButton_ = document.getElementById('add');
 
+    /** @private {!HTMLElement} Button th clear the list */
+    this.clearListButton_ = document.getElementById('clear');
+
     this.addItemButton_.addEventListener('click', () => this.addItem());
+    this.clearListButton_.addEventListener('click', () => this.controller_.clearList());
+
   }
   /**
    * Update the UI with the shopping list contents.
@@ -48,6 +53,7 @@ class View {
     this.inputBox_.value = '';
     this.quantityBox_.value = '';
     this.inputBox_.focus();
+    this.clearListButton_.disabled = this.model_.items.length === 0;
   }
 
   /**

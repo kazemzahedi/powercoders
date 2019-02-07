@@ -41,4 +41,11 @@ class Model {
     this.view_.update();
   }
 
+  /**
+   *Clear the shopping list of all items.
+   */
+  clear() {
+    this.items_ = [];
+    this.view_.update();
+  }
 }
