@@ -30,6 +30,8 @@ class View {
 
     this.addItemButton_.addEventListener('click', () => this.addItem());
     this.clearListButton_.addEventListener('click', () => this.controller_.clearList());
+    this.inputBox_.addEventListener('keyup', (event) => this.onKeyup(event));
+    this.quantityBox_.addEventListener('keyup', (event) => this.onKeyup(event));
 
   }
   /**
@@ -50,6 +52,7 @@ class View {
       this.shoppingList_.appendChild(listItem);
     }
 
+    this.addItemButton_.disabled = true;
     this.inputBox_.value = '';
     this.quantityBox_.value = '';
     this.inputBox_.focus();
@@ -64,5 +67,28 @@ class View {
     const trimmedQuantity = this.quantityBox_.value.trim();
 
     this.controller_.addItem(trimmedValue, trimmedQuantity);
+  }
+
+  /**
+   * Handle keyup events for input widgets. Conditionally
+   * enable/disable the addItemButton, and add the item if
+   * it's not the empty string.
+   *
+   * @param event {!KeyboardEvent} Event that triggered
+   */
+  onKeyup() {
+    const trimmedValue = this.inputBox_.value.trim();
+
+    this.addItemButton_.disabled = trimmedValue === '';
+
+    if (trimmedValue === ''){
+      return;
+    }
+
+    if (event.key !== 'Enter') {
+      return;
+    }
+
+    this.addItem();
   }
 }
